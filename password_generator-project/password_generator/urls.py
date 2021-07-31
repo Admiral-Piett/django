@@ -16,6 +16,10 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
+from generator import views as generator_views
+
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('password/', generator_views.password, name="create_password"),
+    path('', generator_views.index, name="index"),
 ]
