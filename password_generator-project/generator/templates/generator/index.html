@@ -1,0 +1,17 @@
+<h2>Generate Password</h2>
+
+<form action="password">
+    <select name="length">
+        {% for length in pwd_lengths %}
+            <option>{{ length }}</option>
+        {% endfor %}
+    </select>
+    <br>
+    <input type="checkbox" name="uppercase"> Upper Case
+    <br>
+    <input type="checkbox" name="numbers"> Numbers
+    <br>
+    <input type="checkbox" name="special"> Special Characters
+    <br>
+    <input type="submit" value="Generate Password">
+</form>
